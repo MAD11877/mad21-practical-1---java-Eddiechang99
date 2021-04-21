@@ -27,7 +27,7 @@ public class Question4
         System.out.print("*");
       }
 
-//     System.out.println();
+    System.out.println();
 
     }
 
