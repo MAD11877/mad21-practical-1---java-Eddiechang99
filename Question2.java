@@ -11,6 +11,19 @@ public class Question2
      */
      
     Scanner in = new Scanner(System.in);
-    double height = in.nextDouble();
+
+//     System.out.println("Enter height: "); 
+    double height = in.nextDouble(); 
+
+//     System.out.println("Enter weight: ");
+    double weight = in.nextDouble();
+
+//     System.out.println("You are " + height +  "m tall, weighing at " + weight + "kg");
+
+    double bmi = weight / (height * height);
+
+    System.out.println("Your BMI is " + bmi);
+
+    in.close();
   }
 }
