@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Question5
 {
@@ -27,6 +29,35 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+//     System.out.println("Enter number count: ");
+    int count = in.nextInt();
+
+    HashMap<Integer,Integer> noCount = new HashMap<Integer,Integer>();
+
+    for (int i = 0; i < count; i++) {
+      int y = in.nextInt();
+      if (noCount.containsKey(y)) {
+        int previousValue = noCount.get(y);
+        noCount.replace(y,++previousValue);
+      }
+
+      else {
+        noCount.put(y,1);      }
+    }
+
+    int max = 0;
+    int maxKey = 0;
+
+    for (int j : noCount.keySet()) {
+      if (noCount.get(j) > max) {
+        max = noCount.get(j);
+        maxKey = j;
+      }
+    }
+
+//     System.out.println(noCount);
+    System.out.println(maxKey);
+    in.close();
     
   }
 }
